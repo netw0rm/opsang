@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { routing } from './app.routes';
+import { AppRoutingmodule } from './app-routing.module';
 import { MdButtonModule, MdRadioModule, MdInputModule, MdMenuModule, MdCheckboxModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -30,6 +30,7 @@ import { PanelsComponent } from './dashboard/component/panels/panels.component';
 
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
+import { AssetsComponent } from './dashboard/assets/assets.component';
 
 @NgModule({
   declarations: [
@@ -53,13 +54,14 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
     SettingsComponent,
     PriceTableComponent,
     PanelsComponent,
-    WizardComponent
+    WizardComponent,
+    AssetsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing,
+    AppRoutingmodule,
     BrowserAnimationsModule,
     MdButtonModule,
     MdRadioModule,
